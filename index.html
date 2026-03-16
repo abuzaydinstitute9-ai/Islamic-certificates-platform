@@ -719,29 +719,29 @@ function tpl_emerald(d){
       </div>
     </div>
     <!-- institute name -->
-    <div style="text-align:center;font-size:14px;font-family:'Nunito',sans-serif;font-weight:700;color:#1a1a14;margin-bottom:10px;letter-spacing:.3px">${d.inst}</div>
+    <div style="text-align:center;font-size:14px;font-family:'Nunito',sans-serif;font-weight:700;color:#1a1a14;margin-bottom:10px;letter-spacing:.3px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <!-- main title -->
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:28px;font-family:'Cinzel',serif;font-weight:700;color:#1a1a14;letter-spacing:2px;text-transform:uppercase;line-height:1.15">Certificate of Achievement</div>
+      <div style="font-size:28px;font-family:'Cinzel',serif;font-weight:700;color:#1a1a14;letter-spacing:2px;text-transform:uppercase;line-height:1.15;word-spacing:.03em">Certificate of Achievement</div>
     </div>
     <!-- divider -->
     <div style="border-top:1.5px solid #3d3d30;margin:0 0 16px"></div>
     <!-- body text -->
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
+      <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;color:#3d3d38;line-height:1.7;word-spacing:.03em">This certificate is proudly presented to</div>
     </div>
     <!-- student name — large italic script -->
     <div style="text-align:center;margin:6px 0 16px">
-      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#1a1a14;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#1a1a14;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <!-- achievement -->
     <div style="text-align:center;margin-bottom:10px">
       <div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#eaf5ef')}</div>
-    <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:700;color:#3d3d38">For successfully completing</div>
-      <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#0d3d20;margin-top:4px;word-break:break-word">${d.ach}</div>
+    <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:700;color:#3d3d38;line-height:1.6;word-spacing:.03em">For successfully completing</div>
+      <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#0d3d20;margin-top:4px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
     <!-- paragraph body -->
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-family:'Nunito',sans-serif;font-weight:600;max-width:460px;margin:8px auto 0;padding:0 10px">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-family:'Nunito',sans-serif;font-weight:600;max-width:460px;margin:8px auto 0;padding:0 10px;word-spacing:.03em">${msg}</div>`:''}
     <!-- spacer -->
     <div style="flex:1"></div>
     <!-- footer: two sigs + QR + stamp -->
@@ -750,8 +750,8 @@ function tpl_emerald(d){
       <div style="text-align:center;min-width:140px">
         <div style="height:32px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#aaa')}</div>
         <div style="width:130px;height:1px;background:#3d3d38;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;font-family:'Nunito',sans-serif;color:#1a1a14">${d.teacher}</div>
-        <div style="font-size:10px;font-family:'Nunito',sans-serif;color:#767670;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;font-family:'Nunito',sans-serif;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;font-family:'Nunito',sans-serif;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <!-- centre: QR + stamp -->
       <div style="display:flex;flex-direction:column;align-items:center;gap:6px">
@@ -761,21 +761,21 @@ function tpl_emerald(d){
           <div style="width:42px;height:42px;border-radius:50%;border:1.5px solid #1e7540;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="#0d3d20" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:7px;font-family:'Nunito',sans-serif;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fdfaf3;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:7px;font-family:'Nunito',sans-serif;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fdfaf3;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:700;color:#767670;margin-top:2px">ID: ${d.cid}</div>
+        <div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:700;color:#767670;margin-top:2px;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <!-- right sig: institute -->
       <div style="text-align:center;min-width:140px">
         <div style="height:32px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#aaa">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#aaa;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#3d3d38;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;font-family:'Nunito',sans-serif;color:#1a1a14">${d.inst}</div>
-        <div style="font-size:10px;font-family:'Nunito',sans-serif;color:#767670;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;font-family:'Nunito',sans-serif;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;font-family:'Nunito',sans-serif;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
+    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5;line-height:1.6;word-spacing:.03em">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
   </div>
 </div>`;
 }
@@ -803,33 +803,33 @@ function tpl_gold(d){
       </div>
     </div>
     <!-- institute -->
-    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:12px">${d.inst}</div>
+    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:12px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <!-- title bold block -->
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:32px;font-family:'Cinzel',serif;font-weight:900;color:#1a1a14;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2">Certificate of<br>Achievement</div>
+      <div style="font-size:32px;font-family:'Cinzel',serif;font-weight:900;color:#1a1a14;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2;word-spacing:.03em">Certificate of<br>Achievement</div>
     </div>
     <div style="border-top:1.5px solid #c49a20;margin:0 0 14px"></div>
     <!-- presented to -->
-    <div style="text-align:center;font-size:13px;font-weight:600;color:#3d3d38;margin-bottom:8px">This certificate is proudly presented to</div>
+    <div style="text-align:center;font-size:13px;font-weight:600;color:#3d3d38;margin-bottom:8px;line-height:1.6;word-spacing:.03em">This certificate is proudly presented to</div>
     <!-- student name -->
     <div style="text-align:center;margin:4px 0 16px">
-      <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#1a1a14;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#1a1a14;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <!-- achievement -->
 <div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#fffdf0')}</div>
         <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-weight:600;color:#3d3d38">In recognition of successfully completing</div>
-      <div style="font-size:18px;font-family:'Cinzel',serif;font-weight:700;color:#0d3d20;margin-top:5px;word-break:break-word">${d.ach}</div>
+      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.6;word-spacing:.03em">In recognition of successfully completing</div>
+      <div style="font-size:18px;font-family:'Cinzel',serif;font-weight:700;color:#0d3d20;margin-top:5px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0;word-spacing:.03em">${msg}</div>`:''}
     <div style="flex:1"></div>
     <!-- footer -->
     <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;border-top:1.5px solid #c49a20;margin-top:18px">
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#bbb')}</div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.teacher}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
         ${qrBlock(d.cid,'#0d3d20','#c49a20')}
@@ -837,20 +837,20 @@ function tpl_gold(d){
           <div style="width:40px;height:40px;border-radius:50%;border:1.5px solid #1e7540;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#0d3d20" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fffdf0;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fffdf0;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;color:#767670;font-weight:700">ID: ${d.cid}</div>
+        <div style="font-size:8px;color:#767670;font-weight:700;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#bbb">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#bbb;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.inst}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
+    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5;line-height:1.6;word-spacing:.03em">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
   </div>
 </div>`;
 }
@@ -877,33 +877,33 @@ function tpl_academic(d){
         </div>
       </div>
     </div>
-    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:12px">${d.inst}</div>
+    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:12px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <!-- title -->
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:28px;font-family:'Playfair Display',serif;font-weight:700;color:#0d3d20;line-height:1.2">Certificate of Excellence</div>
+      <div style="font-size:28px;font-family:'Playfair Display',serif;font-weight:700;color:#0d3d20;line-height:1.2;word-spacing:.03em">Certificate of Excellence</div>
     </div>
     <div style="border-top:1.5px solid #0d3d20;margin:0 0 16px"></div>
     <!-- body -->
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
+      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7;word-spacing:.03em">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
-      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
     <div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#eaf5ef')}</div>
-    <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
-      <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;color:#0d3d20;margin-top:4px;word-break:break-word">${d.ach}</div>
+    <div style="font-size:13px;font-weight:700;color:#3d3d38;line-height:1.6;word-spacing:.03em">For successfully completing</div>
+      <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;color:#0d3d20;margin-top:4px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0;word-spacing:.03em">${msg}</div>`:''}
     <div style="flex:1"></div>
     <!-- footer -->
     <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;border-top:1.5px solid #0d3d20;margin-top:18px">
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#ccc')}</div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.teacher}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
         ${qrBlock(d.cid,'#0d3d20','#d4ede0')}
@@ -911,17 +911,17 @@ function tpl_academic(d){
           <div style="width:40px;height:40px;border-radius:50%;border:1.5px solid #1e7540;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#0d3d20" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fff;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fff;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;color:#767670;font-weight:700">ID: ${d.cid}</div>
+        <div style="font-size:8px;color:#767670;font-weight:700;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.inst}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
   </div>
@@ -954,31 +954,31 @@ function tpl_distinction(d){
         </div>
       </div>
     </div>
-    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:10px">${d.inst}</div>
+    <div style="text-align:center;font-size:14px;font-weight:700;color:#1a1a14;margin-bottom:10px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:15px;font-family:'Amiri',serif;color:#a07718;direction:rtl;margin-bottom:5px">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
-      <div style="font-size:28px;font-family:'Cinzel',serif;font-weight:700;color:#0d3d20;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2">Certificate of<br>Qur'ānic Distinction</div>
+      <div style="font-size:15px;font-family:'Amiri',serif;color:#a07718;direction:rtl;margin-bottom:5px;line-height:1.6;word-spacing:.03em">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+      <div style="font-size:28px;font-family:'Cinzel',serif;font-weight:700;color:#0d3d20;letter-spacing:1.5px;text-transform:uppercase;line-height:1.2;word-spacing:.03em">Certificate of<br>Qur'ānic Distinction</div>
     </div>
     <div style="border-top:1.5px solid #c49a20;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
+      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7;word-spacing:.03em">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
-      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
     <div style="text-align:center">${badgeBlock(d.ach,'#c49a20','#fdfaf3')}</div>
-    <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
-      <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#a07718;margin-top:4px;word-break:break-word">${d.ach}</div>
+    <div style="font-size:13px;font-weight:700;color:#3d3d38;line-height:1.6;word-spacing:.03em">For successfully completing</div>
+      <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#a07718;margin-top:4px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0;word-spacing:.03em">${msg}</div>`:''}
     <div style="flex:1"></div>
     <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;border-top:1.5px solid #c49a20;margin-top:18px">
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#ccc')}</div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.teacher}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
         ${qrBlock(d.cid,'#0d3d20','#c49a20')}
@@ -986,20 +986,20 @@ function tpl_distinction(d){
           <div style="width:40px;height:40px;border-radius:50%;border:1.5px solid #1e7540;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#0d3d20" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fdfaf3;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#fdfaf3;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;color:#767670;font-weight:700">ID: ${d.cid}</div>
+        <div style="font-size:8px;color:#767670;font-weight:700;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#1a1a14;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#1a1a14">${d.inst}</div>
-        <div style="font-size:10px;color:#767670;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;color:#1a1a14;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;color:#767670;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
+    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5;line-height:1.6;word-spacing:.03em">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
   </div>
 </div>`;
 }
@@ -1027,31 +1027,31 @@ function tpl_parchment(d){
         </div>
       </div>
     </div>
-    <div style="text-align:center;font-family:'Amiri',serif;font-size:16px;color:#a07718;direction:rtl;margin-bottom:4px">الحمد لله رب العالمين</div>
-    <div style="text-align:center;font-size:13px;font-weight:700;color:#5c3a1e;margin-bottom:10px">${d.inst}</div>
+    <div style="text-align:center;font-family:'Amiri',serif;font-size:16px;color:#a07718;direction:rtl;margin-bottom:4px;line-height:1.6;word-spacing:.03em">الحمد لله رب العالمين</div>
+    <div style="text-align:center;font-size:13px;font-weight:700;color:#5c3a1e;margin-bottom:10px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:28px;font-family:'Amiri',serif;font-weight:700;color:#5c3a1e;line-height:1.2">Certificate of Completion</div>
+      <div style="font-size:28px;font-family:'Amiri',serif;font-weight:700;color:#5c3a1e;line-height:1.2;word-spacing:.03em">Certificate of Completion</div>
     </div>
     <div style="border-top:1.5px solid #a07718;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#5c3a1e;line-height:1.7">This certificate is proudly presented to</div>
+      <div style="font-size:13px;font-weight:600;color:#5c3a1e;line-height:1.7;word-spacing:.03em">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
-      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#5c3a1e;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#5c3a1e;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
     <div style="text-align:center">${badgeBlock(d.ach,'#a07718','#fdf8ee')}</div>
-    <div style="font-size:13px;font-weight:700;color:#5c3a1e">For successfully completing</div>
-      <div style="font-size:17px;font-family:'Amiri',serif;font-weight:700;color:#a07718;margin-top:4px;word-break:break-word">${d.ach}</div>
+    <div style="font-size:13px;font-weight:700;color:#5c3a1e;line-height:1.6;word-spacing:.03em">For successfully completing</div>
+      <div style="font-size:17px;font-family:'Amiri',serif;font-weight:700;color:#a07718;margin-top:4px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#5c3a1e;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#5c3a1e;font-weight:600;max-width:460px;margin:8px auto 0;word-spacing:.03em">${msg}</div>`:''}
     <div style="flex:1"></div>
     <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;border-top:1.5px solid #a07718;margin-top:18px">
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#ccc')}</div>
         <div style="width:130px;height:1px;background:#5c3a1e;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#5c3a1e">${d.teacher}</div>
-        <div style="font-size:10px;color:#a07718;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;color:#5c3a1e;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;color:#a07718;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
         ${qrBlock(d.cid,'#5c3a1e','#fdf8ee')}
@@ -1059,20 +1059,20 @@ function tpl_parchment(d){
           <div style="width:40px;height:40px;border-radius:50%;border:1.5px solid #c49a20;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#a07718" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#a07718;letter-spacing:1px;background:#fdf8ee;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#a07718;letter-spacing:1px;background:#fdf8ee;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;color:#a07718;font-weight:700">ID: ${d.cid}</div>
+        <div style="font-size:8px;color:#a07718;font-weight:700;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#ccc;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#5c3a1e;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#5c3a1e">${d.inst}</div>
-        <div style="font-size:10px;color:#a07718;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;color:#5c3a1e;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;color:#a07718;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
+    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5;line-height:1.6;word-spacing:.03em">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
   </div>
 </div>`;
 }
@@ -1103,31 +1103,31 @@ function tpl_merit(d){
         </div>
       </div>
     </div>
-    <div style="text-align:center;font-family:'Amiri',serif;font-size:15px;color:#1e7540;direction:rtl;margin-bottom:4px">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
-    <div style="text-align:center;font-size:14px;font-weight:700;color:#0d3d20;margin-bottom:10px">${d.inst}</div>
+    <div style="text-align:center;font-family:'Amiri',serif;font-size:15px;color:#1e7540;direction:rtl;margin-bottom:4px;line-height:1.6;word-spacing:.03em">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</div>
+    <div style="text-align:center;font-size:14px;font-weight:700;color:#0d3d20;margin-bottom:10px;line-height:1.6;word-spacing:.03em">${d.inst}</div>
     <div style="text-align:center;margin-bottom:14px">
-      <div style="font-size:28px;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;color:#0d3d20;line-height:1.2">Certificate of Merit</div>
+      <div style="font-size:28px;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;color:#0d3d20;line-height:1.2;word-spacing:.03em">Certificate of Merit</div>
     </div>
     <div style="border-top:1.5px solid #0d3d20;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#0d3d20;line-height:1.7">This certificate is proudly presented to</div>
+      <div style="font-size:13px;font-weight:600;color:#0d3d20;line-height:1.7;word-spacing:.03em">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
-      <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
+      <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#0d3d20;line-height:1.15;word-break:break-word;word-spacing:.03em">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
 <div style="text-align:center">${badgeBlock(d.ach,'#1e7540','#d4ede0')}</div>
-        <div style="font-size:13px;font-weight:600;color:#0d3d20">In recognition of successfully completing</div>
-      <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;color:#15572e;margin-top:4px;word-break:break-word">${d.ach}</div>
+        <div style="font-size:13px;font-weight:600;color:#0d3d20;line-height:1.6;word-spacing:.03em">In recognition of successfully completing</div>
+      <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;color:#15572e;margin-top:4px;word-break:break-word;line-height:1.6;word-spacing:.03em">${d.ach}</div>
     </div>
-    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#0d3d20;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
+    ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#0d3d20;font-weight:600;max-width:460px;margin:8px auto 0;word-spacing:.03em">${msg}</div>`:''}
     <div style="flex:1"></div>
     <div style="display:flex;align-items:flex-end;justify-content:space-between;padding-top:14px;border-top:1.5px solid #0d3d20;margin-top:18px">
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">${sigOrScript(d.sigUrl,'#9fe1cb')}</div>
         <div style="width:130px;height:1px;background:#0d3d20;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#0d3d20">${d.teacher}</div>
-        <div style="font-size:10px;color:#1e7540;margin-top:1px">Qur'ān Teacher</div>
+        <div style="font-size:12px;font-weight:700;color:#0d3d20;line-height:1.6;word-spacing:.03em">${d.teacher}</div>
+        <div style="font-size:10px;color:#1e7540;margin-top:1px;line-height:1.6;word-spacing:.03em">Qur'ān Teacher</div>
       </div>
       <div style="display:flex;flex-direction:column;align-items:center;gap:5px">
         ${qrBlock(d.cid,'#0d3d20','#d4ede0')}
@@ -1135,20 +1135,20 @@ function tpl_merit(d){
           <div style="width:40px;height:40px;border-radius:50%;border:1.5px solid #1e7540;display:flex;align-items:center;justify-content:center">
             <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="#0d3d20" stroke-width="2.5"><polyline points="4 10 8 14 16 6"/></svg>
           </div>
-          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#eaf5ef;padding:0 3px">CERTIFIED</div>
+          <div style="position:absolute;bottom:-8px;font-size:6.5px;font-weight:900;color:#0d3d20;letter-spacing:1px;background:#eaf5ef;padding:0 3px;line-height:1.6;word-spacing:.03em">CERTIFIED</div>
         </div>
-        <div style="font-size:8px;color:#1e7540;font-weight:700">ID: ${d.cid}</div>
+        <div style="font-size:8px;color:#1e7540;font-weight:700;line-height:1.6;word-spacing:.03em">ID: ${d.cid}</div>
       </div>
       <div style="text-align:center;min-width:140px">
         <div style="height:30px;display:flex;align-items:flex-end;justify-content:center;margin-bottom:3px">
-          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#9fe1cb">Abu Zayd Solutions</div>
+          <div style="font-size:13px;font-family:'Amiri',serif;font-style:italic;color:#9fe1cb;line-height:1.6;word-spacing:.03em">Abu Zayd Solutions</div>
         </div>
         <div style="width:130px;height:1px;background:#0d3d20;margin:0 auto 4px"></div>
-        <div style="font-size:12px;font-weight:700;color:#0d3d20">${d.inst}</div>
-        <div style="font-size:10px;color:#1e7540;margin-top:1px">${d.date}</div>
+        <div style="font-size:12px;font-weight:700;color:#0d3d20;line-height:1.6;word-spacing:.03em">${d.inst}</div>
+        <div style="font-size:10px;color:#1e7540;margin-top:1px;line-height:1.6;word-spacing:.03em">${d.date}</div>
       </div>
     </div>
-    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
+    <div style="text-align:center;margin-top:8px;padding-top:6px;border-top:0.5px solid rgba(0,0,0,.12)"><div style="font-size:8px;font-family:'Nunito',sans-serif;font-weight:800;letter-spacing:1px;text-transform:uppercase;opacity:.5;line-height:1.6;word-spacing:.03em">◆ Powered by Abu Zayd Solutions ◆ &nbsp;·&nbsp; © 2026 Abu Zayd Solutions</div></div>
   </div>
   <div style="height:4px;background:#1e7540;flex-shrink:0"></div>
   <div style="height:10px;background:#15572e;flex-shrink:0"></div>
@@ -1268,7 +1268,7 @@ async function dlCert(fmt){
   try{
     const el=document.getElementById('cert-print').firstElementChild;
     if(!el){hideLdr();alert('Please generate a certificate first.');return;}
-    const canvas=await html2canvas(el,{scale:2,useCORS:true,allowTaint:true,backgroundColor:null,logging:false});
+    await document.fonts.ready;const canvas=await html2canvas(el,{scale:3,useCORS:true,allowTaint:true,backgroundColor:null,logging:false,onclone:(doc)=>{doc.querySelectorAll("*").forEach(el=>{const s=el.style;if(s.wordSpacing==='')s.wordSpacing='normal';if(s.letterSpacing==='')s.letterSpacing='normal';}); }});
     const url=canvas.toDataURL(fmt==='jpg'?'image/jpeg':'image/png',fmt==='jpg'?.95:1);
     const a=document.createElement('a');a.href=url;
     a.download=`AZS_${TPL_NAMES[currentTpl]?.replace(/\s/g,'_')||'Certificate'}_${(document.getElementById('f-name').value||'Student').trim().replace(/\s+/g,'_')}.${fmt}`;
@@ -1281,7 +1281,7 @@ async function dlThenWa(){
   try{
     const el=document.getElementById('cert-print').firstElementChild;
     if(!el){hideLdr();alert('Please generate a certificate first.');return;}
-    const canvas=await html2canvas(el,{scale:2,useCORS:true,allowTaint:true,backgroundColor:null,logging:false});
+    await document.fonts.ready;const canvas=await html2canvas(el,{scale:3,useCORS:true,allowTaint:true,backgroundColor:null,logging:false,onclone:(doc)=>{doc.querySelectorAll("*").forEach(el=>{const s=el.style;if(s.wordSpacing==='')s.wordSpacing='normal';if(s.letterSpacing==='')s.letterSpacing='normal';}); }});
     const url=canvas.toDataURL('image/png',1);
     const a=document.createElement('a');a.href=url;
     a.download=`AZS_Certificate_${(document.getElementById('f-name').value||'Student').trim().replace(/\s+/g,'_')}.png`;
