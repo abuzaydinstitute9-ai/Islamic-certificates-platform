@@ -17,15 +17,15 @@ body{font-family:'Nunito',sans-serif;color:var(--ink);font-size:14px;background:
 .hp-logo{display:flex;align-items:center;gap:10px;cursor:pointer}
 .hp-logo-text .t1{font-size:14px;font-weight:900;color:var(--eg)}
 .hp-logo-text .t2{font-size:9px;color:var(--ink3);font-weight:700;letter-spacing:.8px;text-transform:uppercase}
-.hp-nav-links{display:flex;align-items:center;gap:26px}
+.hp-nav-links{display:none}@media(min-width:640px){.hp-nav-links{display:flex;align-items:center;gap:26px}}
 .hp-nav-links a{font-size:13px;font-weight:700;color:var(--ink3);text-decoration:none;cursor:pointer}
 .hp-nav-links a:hover{color:var(--eg)}
 .hp-cta{background:var(--eg);color:#fff;padding:9px 22px;border-radius:8px;font-size:13px;font-weight:800;cursor:pointer;border:none;font-family:'Nunito',sans-serif}
-.hero{background:var(--eg);padding:88px 5% 76px;display:flex;align-items:center;gap:56px;position:relative;overflow:hidden}
+.hero{background:var(--eg);padding:52px 5% 48px;display:flex;align-items:center;gap:40px;position:relative;overflow:hidden}@media(min-width:768px){.hero{padding:88px 5% 76px}}
 .hero::before{content:'';position:absolute;right:-80px;top:-80px;width:400px;height:400px;border:70px solid rgba(255,255,255,0.04);border-radius:50%}
 .hero-content{flex:1;position:relative;z-index:2}
 .hero-badge{display:inline-block;background:rgba(255,255,255,0.12);color:rgba(255,255,255,0.85);font-size:11px;font-weight:800;padding:5px 14px;border-radius:20px;letter-spacing:.8px;text-transform:uppercase;margin-bottom:20px;border:1px solid rgba(255,255,255,0.15)}
-.hero h1{font-family:'Amiri',serif;font-size:46px;color:#fff;font-weight:700;line-height:1.15;margin-bottom:16px}
+.hero h1{font-family:'Amiri',serif;font-size:28px;color:#fff;font-weight:700;line-height:1.2;margin-bottom:12px}@media(min-width:640px){.hero h1{font-size:46px;line-height:1.15;margin-bottom:16px}}
 .hero h1 span{color:var(--gold2)}
 .hero-sub{font-size:14px;color:rgba(255,255,255,0.72);line-height:1.8;margin-bottom:32px;max-width:460px;font-weight:600}
 .hero-btns{display:flex;gap:13px;flex-wrap:wrap}
@@ -34,7 +34,7 @@ body{font-family:'Nunito',sans-serif;color:var(--ink);font-size:14px;background:
 .hero-stats{display:flex;gap:34px;margin-top:40px;padding-top:30px;border-top:1px solid rgba(255,255,255,0.12)}
 .hs-n{font-size:27px;font-weight:900;color:#fff;font-family:'Amiri',serif}
 .hs-l{font-size:10px;color:rgba(255,255,255,0.48);font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
-.hero-visual{flex:0 0 310px;position:relative;z-index:2}
+.hero-visual{display:none}@media(min-width:768px){.hero-visual{display:block;flex:0 0 280px;position:relative;z-index:2}}
 .mini-cert{background:var(--cream);border:4px solid rgba(255,255,255,0.22);border-radius:4px;padding:18px 20px;transform:rotate(-2deg);position:relative}
 .mini-cert::after{content:'';position:absolute;inset:5px;border:1px solid rgba(196,154,32,0.45);pointer-events:none}
 .sec{padding:78px 5%}
@@ -85,41 +85,53 @@ body{font-family:'Nunito',sans-serif;color:var(--ink);font-size:14px;background:
 .hf-copy{color:rgba(255,255,255,0.26);font-weight:600}
 .hf-right{color:rgba(255,255,255,0.2);font-weight:700;font-size:11px}
 /* APP */
-.rail{width:228px;min-width:228px;background:var(--eg);display:flex;flex-direction:column;height:100vh}
-.rail-head{padding:16px 14px 12px;border-bottom:1px solid rgba(255,255,255,0.09)}
+.rail{width:220px;min-width:220px;background:var(--eg);display:flex;flex-direction:column;height:100vh;transition:transform .25s}
+.rail-head{padding:14px 12px 10px;border-bottom:1px solid rgba(255,255,255,0.09)}
 .logo-wrap{display:flex;align-items:center;gap:10px}
-.logo-box{width:38px;height:38px;border-radius:9px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
-.logo-text .ln1{color:#fff;font-size:12px;font-weight:900;line-height:1.2}
-.logo-text .ln2{color:rgba(255,255,255,0.36);font-size:9px;letter-spacing:1.2px;text-transform:uppercase;margin-top:1px}
-.rail-nav{flex:1;padding:7px 0;overflow-y:auto}
-.ns{padding:12px 14px 4px;font-size:9px;font-weight:900;letter-spacing:1.8px;color:rgba(255,255,255,0.19);text-transform:uppercase}
-.ni{display:flex;align-items:center;gap:10px;padding:8px 14px;color:rgba(255,255,255,0.55);cursor:pointer;font-size:13px;font-weight:700;border-left:3px solid transparent;transition:all .13s;margin:1px 0}
+.logo-box{width:34px;height:34px;border-radius:8px;background:#fff;display:flex;align-items:center;justify-content:center;overflow:hidden;flex-shrink:0}
+.logo-text .ln1{color:#fff;font-size:11px;font-weight:900;line-height:1.2}
+.logo-text .ln2{color:rgba(255,255,255,0.36);font-size:8px;letter-spacing:1px;text-transform:uppercase;margin-top:1px}
+.rail-nav{flex:1;padding:5px 0;overflow-y:auto}
+.ns{padding:10px 12px 3px;font-size:8px;font-weight:900;letter-spacing:1.5px;color:rgba(255,255,255,0.19);text-transform:uppercase}
+.ni{display:flex;align-items:center;gap:9px;padding:8px 12px;color:rgba(255,255,255,0.55);cursor:pointer;font-size:12px;font-weight:700;border-left:3px solid transparent;transition:all .13s;margin:1px 0}
 .ni:hover{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.9)}
 .ni.on{background:rgba(255,255,255,0.1);color:#fff;border-left-color:var(--gold2)}
-.ni svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;flex-shrink:0}
-.rail-foot{padding:12px 14px;border-top:1px solid rgba(255,255,255,0.09)}
-.rf-inst{color:rgba(255,255,255,0.8);font-size:12px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.rf-contact{color:rgba(255,255,255,0.3);font-size:10px;margin-top:2px;font-weight:600}
-.workspace{flex:1;display:flex;flex-direction:column;overflow:hidden;background:#f0ede6}
-.topbar{background:#fff;border-bottom:1px solid var(--bdr);padding:0 22px;height:52px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
-.tb-left{display:flex;align-items:center;gap:10px}
-.tb-title{font-size:15px;font-weight:900;color:var(--eg);font-family:'Amiri',serif}
-.tb-crumb{font-size:11px;color:var(--eg2);padding:3px 10px;background:var(--egl2);border-radius:20px;font-weight:700;border:1px solid var(--egl)}
-.tb-right{display:flex;align-items:center;gap:8px}
-.tb-date{font-size:11px;color:var(--ink3);font-weight:700}
-.tb-plan{background:var(--goldl);color:var(--gold);font-size:10px;font-weight:900;padding:3px 9px;border-radius:20px;border:1px solid var(--goldb)}
-.btn-home{background:transparent;border:1px solid var(--bdr);color:var(--ink3);padding:5px 11px;border-radius:7px;font-size:11px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif}
+.ni svg{width:13px;height:13px;fill:none;stroke:currentColor;stroke-width:2;flex-shrink:0}
+.rail-foot{padding:10px 12px;border-top:1px solid rgba(255,255,255,0.09)}
+.rf-inst{color:rgba(255,255,255,0.8);font-size:11px;font-weight:800;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rf-contact{color:rgba(255,255,255,0.3);font-size:9px;margin-top:2px;font-weight:600}
+.workspace{flex:1;display:flex;flex-direction:column;overflow:hidden;background:#f0ede6;min-width:0}
+.topbar{background:#fff;border-bottom:1px solid var(--bdr);padding:0 14px;height:48px;display:flex;align-items:center;justify-content:space-between;flex-shrink:0}
+.tb-left{display:flex;align-items:center;gap:8px;min-width:0}
+.tb-title{font-size:13px;font-weight:900;color:var(--eg);font-family:'Amiri',serif;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tb-crumb{font-size:10px;color:var(--eg2);padding:2px 8px;background:var(--egl2);border-radius:20px;font-weight:700;border:1px solid var(--egl);white-space:nowrap;display:none}
+.tb-right{display:flex;align-items:center;gap:6px;flex-shrink:0}
+.tb-date{font-size:10px;color:var(--ink3);font-weight:700;display:none}
+.tb-plan{background:var(--goldl);color:var(--gold);font-size:9px;font-weight:900;padding:2px 7px;border-radius:20px;border:1px solid var(--goldb)}
+.btn-home{background:transparent;border:1px solid var(--bdr);color:var(--ink3);padding:4px 9px;border-radius:7px;font-size:10px;font-weight:800;cursor:pointer;font-family:'Nunito',sans-serif;white-space:nowrap}
 .btn-home:hover{border-color:var(--eg3);color:var(--eg)}
-.scroll{flex:1;overflow-y:auto;padding:20px 22px}
+.btn-menu{display:none;background:var(--eg);border:none;color:#fff;width:32px;height:32px;border-radius:8px;cursor:pointer;align-items:center;justify-content:center;flex-shrink:0}
+.btn-menu svg{width:16px;height:16px;fill:none;stroke:#fff;stroke-width:2}
+.rail-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:199}
+.scroll{flex:1;overflow-y:auto;padding:14px 14px}
+@media(min-width:640px){.tb-crumb{display:flex}.tb-date{display:block}.scroll{padding:18px 20px}}
+@media(max-width:640px){
+  #app.show{flex-direction:column}
+  .rail{position:fixed;top:0;left:0;height:100vh;z-index:200;transform:translateX(-100%);width:240px}
+  .rail.open{transform:translateX(0)}
+  .rail-overlay.open{display:block}
+  .btn-menu{display:flex}
+  .workspace{width:100vw}
+}
 .page{display:none}.page.on{display:block}
-.sg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}
+.sg{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:14px}@media(min-width:640px){.sg{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:18px}}
 .sc{background:#fff;border:1px solid var(--bdr2);border-radius:var(--r2);padding:16px 17px;position:relative;overflow:hidden}
 .sc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;border-radius:var(--r2) var(--r2) 0 0}
 .sc.g::before{background:var(--eg3)}.sc.o::before{background:var(--gold2)}.sc.t::before{background:#1a8a7a}.sc.b::before{background:#1a5a8a}
 .sc-n{font-size:26px;font-weight:900;color:var(--eg);line-height:1}
 .sc-l{font-size:10px;color:var(--ink3);margin-top:4px;font-weight:800;letter-spacing:.5px;text-transform:uppercase}
 .sc-s{font-size:11px;color:var(--eg3);margin-top:2px;font-weight:700}
-.panel{background:#fff;border:1px solid var(--bdr2);border-radius:var(--r2);padding:18px 20px;margin-bottom:15px}
+.panel{background:#fff;border:1px solid var(--bdr2);border-radius:var(--r2);padding:14px 14px;margin-bottom:12px}@media(min-width:520px){.panel{padding:18px 20px;margin-bottom:15px}}
 .pt{font-family:'Amiri',serif;font-size:16px;font-weight:700;color:var(--eg);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--egl);display:flex;align-items:center;gap:8px}
 .pt svg{width:14px;height:14px;fill:none;stroke:var(--eg3);stroke-width:2;flex-shrink:0}
 .empty-state{text-align:center;padding:38px 20px}
@@ -136,7 +148,7 @@ body{font-family:'Nunito',sans-serif;color:var(--ink);font-size:14px;background:
 .ai-ach{font-size:11px;color:var(--ink3);margin-top:1px;font-weight:600}
 .ai-date{font-size:11px;color:var(--ink4);flex-shrink:0;font-weight:700}
 .chip{display:inline-block;background:var(--egl2);color:var(--eg2);font-size:9px;padding:1px 6px;border-radius:20px;font-weight:800;margin-left:5px;border:1px solid var(--egl)}
-.fg{display:grid;grid-template-columns:1fr 1fr;gap:13px}
+.fg{display:grid;grid-template-columns:1fr;gap:11px}@media(min-width:520px){.fg{grid-template-columns:1fr 1fr;gap:13px}}
 .fg .sp{grid-column:1/-1}
 .fgrp{display:flex;flex-direction:column;gap:5px}
 .lbl{font-size:10px;font-weight:900;color:var(--ink3);letter-spacing:.8px;text-transform:uppercase}
@@ -233,8 +245,14 @@ tr:hover td{background:var(--egl2)}
 .act.wa{background:#25D366;color:#fff;border-color:#25D366}.act.wa:hover{background:#1eac54}
 .act.wa svg,.act.tg svg{fill:currentColor;stroke:none}
 .act.tg{background:#2CA5E0;color:#fff;border-color:#2CA5E0}
-.cert-canvas-wrap{padding:16px 18px;overflow-x:auto;background:#e8e2d6}
-#cert-print{display:block;margin:0 auto}
+.cert-canvas-wrap{padding:10px 8px;overflow-x:auto;background:#e8e2d6;display:flex;justify-content:center;align-items:flex-start;-webkit-overflow-scrolling:touch}
+#cert-print{display:block;margin:0 auto;transform-origin:top center;max-width:100%}
+@media(max-width:680px){
+  .cert-canvas-wrap{padding:6px 4px}
+  .cert-modal{width:100%!important;border-radius:10px}
+  .cm-actions{gap:4px;padding:8px 10px}
+  .act{padding:5px 8px;font-size:11px}
+}
 /* MSG CARDS */
 #mcard-p,#mcard-s{width:700px;background:#fff;border:3px solid var(--eg);border-radius:10px;padding:30px 38px;font-family:'Nunito',sans-serif;position:absolute;left:-9999px;top:0}
 .mc-logo-row{display:flex;align-items:center;gap:12px;margin-bottom:16px;padding-bottom:13px;border-bottom:2px solid var(--egl)}
@@ -259,8 +277,55 @@ tr:hover td{background:var(--egl2)}
   .rail{width:46px;min-width:46px}.logo-text,.ns,.ni span,.rf-inst,.rf-contact{display:none}
   .rail-head{padding:10px 6px}.logo-wrap{justify-content:center}
   .ni{padding:8px;justify-content:center;border-left:none}.ni.on{background:rgba(255,255,255,.1);border-left:none}
-  .scroll{padding:12px}.sg{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr}.fg .sp{grid-column:unset}
+  .scroll{padding:10px 8px}.sg{grid-template-columns:1fr 1fr}.fg{grid-template-columns:1fr}.fg .sp{grid-column:unset}
   .topbar{padding:0 11px}.tpl-pick{grid-template-columns:1fr 1fr}.sr-lbl{width:80px}
+  .cert-modal{width:100%;border-radius:10px}
+  .cert-canvas-wrap{padding:8px 4px;overflow-x:auto}
+  #cert-print{transform:scale(var(--cert-scale,0.52));transform-origin:top center;margin-bottom:calc((var(--cert-scale,0.52) - 1) * 830px)}
+  .cm-head{padding:10px 12px}
+  .cm-actions{gap:4px;padding:8px 10px}
+  .act{font-size:11px;padding:6px 9px}
+}
+@media(max-width:400px){
+  #cert-print{--cert-scale:0.44}
+}
+
+/* ── MOBILE RESPONSIVE ── */
+@media(max-width:768px){
+  .hp-nav-links{display:none}
+  .hero{flex-direction:column;padding:48px 5% 40px;gap:28px}
+  .hero h1{font-size:30px}
+  .hero-visual{display:none}
+  .hero-stats{gap:20px}
+  .hs-n{font-size:20px}
+  .tpl-showcase{grid-template-columns:1fr 1fr}
+  .pricing-grid{grid-template-columns:1fr}
+  .hf-top{grid-template-columns:1fr}
+  #app{flex-direction:column;height:auto;min-height:100vh;overflow:auto}
+  .rail{width:100%;min-width:unset;height:auto;flex-direction:row;flex-wrap:wrap;overflow-x:auto}
+  .rail-head{padding:10px 12px}
+  .rail-nav{display:flex;flex-direction:row;padding:4px 6px;overflow-x:auto;flex:none;width:100%}
+  .ns{display:none}
+  .ni{padding:6px 10px;font-size:11px;border-left:none;border-bottom:3px solid transparent;white-space:nowrap;flex-shrink:0}
+  .ni.on{border-left:none;border-bottom-color:var(--gold2)}
+  .rail-foot{display:none}
+  .workspace{overflow:auto;height:auto}
+  .topbar{padding:0 12px;height:44px;flex-wrap:wrap}
+  .tb-crumb{display:none}
+  .scroll{padding:12px}
+  .sg{grid-template-columns:repeat(2,1fr)}
+  .fg{grid-template-columns:1fr}
+  .fg .sp{grid-column:1}
+  .tpl-pick{grid-template-columns:1fr 1fr}
+  .cert-canvas-wrap{padding:8px;overflow-x:auto}
+  #cert-print{transform:scale(0.52);transform-origin:top center;margin-bottom:-360px}
+  .cm-actions{gap:4px}
+  .act{padding:5px 8px;font-size:11px}
+  table{font-size:11px}
+  th,td{padding:6px 7px}
+}
+@media(max-width:400px){
+  #cert-print{transform:scale(0.44);margin-bottom:-430px}
 }
 </style>
 </head>
@@ -394,7 +459,7 @@ tr:hover td{background:var(--egl2)}
   </div>
   <div class="workspace">
     <div class="topbar">
-      <div class="tb-left"><div class="tb-title" id="pg-title">Dashboard</div><div class="tb-crumb" id="pg-crumb">Overview</div></div>
+      <div class="tb-left"><button class="btn-menu" onclick="toggleRail()" aria-label="Menu"><svg viewBox="0 0 24 24"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button><div class="tb-title" id="pg-title">Dashboard</div><div class="tb-crumb" id="pg-crumb">Overview</div></div>
       <div class="tb-right"><div class="tb-date" id="tb-date"></div><div class="tb-plan">Free Plan</div><button class="btn-home" onclick="goHome()">← Homepage</button></div>
     </div>
     <div class="scroll">
@@ -426,7 +491,7 @@ tr:hover td{background:var(--egl2)}
           <div class="pt"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>Student Information</div>
           <div class="fg">
             <div class="fgrp sp"><div class="lbl">Student Full Name *</div><input type="text" id="f-name" placeholder="Enter student's full name"/></div>
-            <div class="fgrp"><div class="lbl">Achievement Type *</div><select id="f-type" onchange="autoTitle()"><option value="">— Select type —</option><option>Completion of Surah</option><option>Completion of Arabic Alphabet</option><option>Memorisation of Juz</option><option>Completion of Tajweed Level</option><option>Basic Ṣalāh Training</option><option>Completion of Wuḍū' Training</option><option>Completion of Five Pillars of Islam</option><option>Completion of Faith (Imān)</option><option>Completion of Qur'ān Recitation Course</option><option>Other Achievement</option></select></div>
+            <div class="fgrp"><div class="lbl">Achievement Type *</div><select id="f-type" onchange="autoTitle()"><option value="">— Select type —</option><option>Completion of Sūrah Al-Fātiḥah</option><option>Completion of the Arabic Alphabet</option><option>Memorisation of Juz 'Amma</option><option>Completion of Tajweed Level One</option><option>Completion of the First Juz of the Noble Qur'ān</option><option>Basic Ṣalāh Training</option><option>Completion of Wuḍū' Training</option><option>Completion of the Five Pillars of Islam</option><option>Completion of Faith (Imān)</option><option>Completion of Qur'ān Recitation Course</option><option>Other Achievement</option></select></div>
             <div class="fgrp"><div class="lbl">Achievement Title *</div><input type="text" id="f-achievement" placeholder="e.g. Completion of Surah Al-Fātiḥah"/><div class="hint">Appears on certificate exactly as written</div></div>
           </div>
         </div>
@@ -465,14 +530,18 @@ tr:hover td{background:var(--egl2)}
       <div class="page" id="page-badges">
         <div class="panel"><div class="pt"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>Achievement Badges</div>
         <div class="bdg-grid">
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><div class="bn">First Surah Memorised</div><div class="bsub">Milestone</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div><div class="bn">Arabic Alphabet Master</div><div class="bsub">Foundation</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="bn">Juz 'Amma Completed</div><div class="bsub">Major achievement</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="bn">Tajweed Advanced</div><div class="bsub">Expert level</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="bn">Ṣalāh Trained</div><div class="bsub">Worship</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div><div class="bn">Five Pillars Completed</div><div class="bsub">Islam Foundation</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn">Faith (Imān) Completed</div><div class="bsub">Pillars of Faith</div><div class="bchip">0 earned</div></div>
-          <div class="bc"><div class="bi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="bn">Tajweed Beginner</div><div class="bsub">Recitation</div><div class="bchip">0 earned</div></div>
+          <div class="bc" id="bdg-surah"><div class="bi"><svg viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg></div><div class="bn">First Surah Memorised</div><div class="bsub">Milestone</div><div class="bchip" id="bc-surah">0 earned</div></div>
+          <div class="bc" id="bdg-alphabet"><div class="bi"><svg viewBox="0 0 24 24"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg></div><div class="bn">Arabic Alphabet Master</div><div class="bsub">Foundation</div><div class="bchip" id="bc-alphabet">0 earned</div></div>
+          <div class="bc" id="bdg-juzamma"><div class="bi"><svg viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><div class="bn">Juz 'Amma Completed</div><div class="bsub">Major Achievement</div><div class="bchip" id="bc-juzamma">0 earned</div></div>
+          <div class="bc" id="bdg-tajadv"><div class="bi"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div><div class="bn">Tajweed Advanced</div><div class="bsub">Expert Level</div><div class="bchip" id="bc-tajadv">0 earned</div></div>
+          <div class="bc" id="bdg-salah"><div class="bi"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg></div><div class="bn">Ṣalāh Trained</div><div class="bsub">Worship</div><div class="bchip" id="bc-salah">0 earned</div></div>
+          <div class="bc" id="bdg-pillars"><div class="bi"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg></div><div class="bn">Five Pillars Completed</div><div class="bsub">Islam Foundation</div><div class="bchip" id="bc-pillars">0 earned</div></div>
+          <div class="bc" id="bdg-iman"><div class="bi"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg></div><div class="bn">Faith (Imān) Completed</div><div class="bsub">Pillars of Faith</div><div class="bchip" id="bc-iman">0 earned</div></div>
+          <div class="bc" id="bdg-tajbeg"><div class="bi"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></div><div class="bn">Tajweed Beginner</div><div class="bsub">Recitation</div><div class="bchip" id="bc-tajbeg">0 earned</div></div>
+          <div class="bc" id="bdg-tajint"><div class="bi"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div><div class="bn">Tajweed Intermediate</div><div class="bsub">Recitation</div><div class="bchip" id="bc-tajint">0 earned</div></div>
+          <div class="bc" id="bdg-wudu"><div class="bi"><svg viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg></div><div class="bn">Wuḍū' Trained</div><div class="bsub">Purification</div><div class="bchip" id="bc-wudu">0 earned</div></div>
+          <div class="bc" id="bdg-firstjuz"><div class="bi"><svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg></div><div class="bn">First Juz of the Noble Qur'ān</div><div class="bsub">Qur'ān Memorisation</div><div class="bchip" id="bc-firstjuz">0 earned</div></div>
+          <div class="bc" id="bdg-fatiha"><div class="bi"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="bn">Sūrah Al-Fātiḥah</div><div class="bsub">Opening Chapter</div><div class="bchip" id="bc-fatiha">0 earned</div></div>
         </div></div>
       </div>
       <!-- MESSAGES -->
@@ -484,7 +553,7 @@ tr:hover td{background:var(--egl2)}
         </div>
       </div>
       <!-- VERIFY -->
-      <div class="page" id="page-verify"><div class="panel vbox"><div class="pt"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Certificate Verification</div><p style="font-size:13px;color:var(--ink3);font-weight:600;margin-bottom:13px;line-height:1.8">Enter Certificate ID to confirm authenticity.</p><div class="fgrp" style="margin-bottom:11px"><div class="lbl">Certificate ID</div><input type="text" id="v-in" placeholder="e.g. AZS-2025-0001"/></div><button class="btn-main" onclick="doVerify()">Verify Certificate</button><div id="v-result"></div></div></div>
+      <div class="page" id="page-verify"><div class="panel vbox"><div class="pt"><svg viewBox="0 0 24 24"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>Certificate Verification</div><p style="font-size:13px;color:var(--ink3);font-weight:600;margin-bottom:13px;line-height:1.8">Enter Certificate ID to confirm authenticity.</p><div class="fgrp" style="margin-bottom:11px"><div class="lbl">Certificate ID</div><input type="text" id="v-in" placeholder="e.g. AZS-2026-0001"/></div><button class="btn-main" onclick="doVerify()">Verify Certificate</button><div id="v-result"></div></div></div>
       <!-- SETTINGS -->
       <div class="page" id="page-settings"><div class="panel"><div class="pt"><svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>Institute Profile</div><div class="sr"><div class="sr-lbl">Institute Logo</div><div class="sr-val"><div class="upzone"><svg viewBox="0 0 24 24"><polyline points="16 16 12 12 8 16"/><line x1="12" y1="12" x2="12" y2="21"/><path d="M20.39 18.39A5 5 0 0018 9h-1.26A8 8 0 103 16.3"/></svg><span id="logo-txt">Click to upload institute logo</span><input type="file" accept="image/*" onchange="handleLogo(event)"/></div></div></div><div class="sr"><div class="sr-lbl">Institute Name</div><div class="sr-val"><input type="text" id="s-inst"/></div></div><div class="sr"><div class="sr-lbl">Director Name</div><div class="sr-val"><input type="text" id="s-dir" placeholder="Director / Principal"/></div></div><div class="sr"><div class="sr-lbl">Phone Number</div><div class="sr-val"><input type="tel" id="s-phone"/></div></div><div class="sr"><div class="sr-lbl">Email</div><div class="sr-val"><input type="email" id="s-email"/></div></div><button class="btn-save" onclick="saveS()">Save Changes</button></div></div>
       <!-- CERT MODAL -->
@@ -499,12 +568,23 @@ tr:hover td{background:var(--egl2)}
               <button class="act tg" onclick="tgCert()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248l-1.97 9.281c-.144.658-.537.818-1.084.508l-3-2.21-1.447 1.394c-.16.161-.295.295-.605.295l.213-3.053 5.56-5.023c.242-.213-.054-.333-.373-.12l-6.871 4.326-2.962-.924c-.643-.204-.657-.643.136-.953l11.57-4.462c.537-.194 1.006.131.833.941z"/></svg>Telegram</button>
             </div>
             <div class="cert-canvas-wrap"><div id="cert-print"></div></div>
+            <div id="cert-encourage" style="display:none;padding:14px 18px 16px;background:var(--egl2);border-top:1px solid var(--egl)">
+              <div style="display:flex;align-items:center;gap:10px;margin-bottom:8px">
+                <div id="enc-badge-icon" style="width:38px;height:38px;border-radius:50%;background:var(--eg);display:flex;align-items:center;justify-content:center;flex-shrink:0;padding:8px;color:#d4ede0"></div>
+                <div>
+                  <div style="font-size:9px;font-weight:900;color:var(--eg3);letter-spacing:1.5px;text-transform:uppercase">Achievement Badge</div>
+                  <div id="enc-badge-label" style="font-size:13px;font-weight:800;color:var(--eg);margin-top:1px"></div>
+                </div>
+              </div>
+              <div style="font-size:13px;line-height:1.9;color:var(--ink2);font-weight:600;font-family:'Nunito',sans-serif;border-left:3px solid var(--eg3);padding-left:10px" id="enc-msg"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
+<div class="rail-overlay" id="rail-overlay" onclick="closeRail()"></div>
 
 <!-- Scripts moved to end of body to ensure DOM is ready before any onclick handlers fire -->
 <script>
@@ -544,7 +624,74 @@ function qrBlock(cid,qrBg,qrColor){
     <div style="font-size:8px;font-family:'Nunito',sans-serif;color:${qrColor};text-align:center;font-weight:700">Scan to verify</div>
   </div>`;
 }
-function autoMsg(d){if(d.msgMode==='auto')return`Congratulations on this beautiful milestone in your Qur'ān learning journey. Continue striving for knowledge and excellence. Bārakallāhu feekum.`;if(d.msgMode==='custom'&&d.customMsg)return d.customMsg;return'';}
+/* ══ BADGE + ENCOURAGEMENT MATCHER ══ */
+const BADGE_MAP=[
+  {keys:['fatiha','fātiḥah','al-fatiha','fatihah'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+   label:"Sūrah Al-Fātiḥah",
+   msg:"Al-Fātiḥah is the greatest sūrah of the Qur'ān and the opening of the Book of Allāh. You have begun with the best of beginnings. May Allāh make it a light for your heart and a constant companion in your ṣalāh. Bārakallāhu feekum."},
+  {keys:['alphabet','arabic alphabet'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>`,
+   label:"Arabic Alphabet Master",
+   msg:"Every word of the Qur'ān is written in the letters you have now mastered. You have unlocked the door to the speech of Allāh. May Allāh grant you ease and joy in every step of this journey. Bārakallāhu feekum."},
+  {keys:["juz 'amma","juz'amma","juz amma","juz-amma"],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+   label:"Juz 'Amma Completed",
+   msg:"Juz 'Amma contains the sūrahs most recited in ṣalāh. You have memorised the treasure of daily worship. May Allāh seal this knowledge in your heart and make it a source of blessing for you and your family. Bārakallāhu feekum."},
+  {keys:['tajweed advanced','tajwīd advanced'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>`,
+   label:"Tajweed Advanced",
+   msg:"You now recite the Qur'ān with the skill of those who honour its every letter. The Prophet ﷺ said: 'The one who recites the Qur'ān beautifully will be with the noble and obedient angels.' You are on the path of excellence. Bārakallāhu feekum."},
+  {keys:['tajweed intermediate','tajwīd intermediate'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>`,
+   label:"Tajweed Intermediate",
+   msg:"Your recitation is growing in beauty and precision. Every rule you apply is an act of love for the words of Allāh. Continue with patience — the advanced level awaits you. Bārakallāhu feekum."},
+  {keys:['tajweed beginner','tajweed level one','tajwīd beginner','tajwīd level one'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>`,
+   label:"Tajweed Beginner",
+   msg:"You have taken the first step in learning to recite the Qur'ān correctly. Every letter recited with proper tajweed is a good deed. May Allāh make the rules of recitation easy and bless your tongue. Bārakallāhu feekum."},
+  {keys:['salah','ṣalāh','salat','prayer training'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>`,
+   label:"Ṣalāh Trained",
+   msg:"Ṣalāh is the pillar of the dīn and the first thing we will be questioned about on the Day of Judgement. You are now equipped to stand before Allāh five times a day with knowledge and confidence. Guard your prayer — it will guard you. Bārakallāhu feekum."},
+  {keys:["wudu","wuḍū","wudhu","purification"],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z"/></svg>`,
+   label:"Wuḍū' Trained",
+   msg:"Purity is half of faith. Allāh loves those who purify themselves. With every wuḍū', your sins are washed away. You have learnt a beautiful act of worship — may Allāh keep you in a state of purity always. Bārakallāhu feekum."},
+  {keys:['five pillars','pillars of islam'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 12h6M9 15h4"/></svg>`,
+   label:"Five Pillars Completed",
+   msg:"Islām is built on five pillars — and you now understand them all. This knowledge is the foundation of your faith and your life. May Allāh make you firm upon each pillar and grant you a life of taqwā. Bārakallāhu feekum."},
+  {keys:['iman','imān','faith','pillars of faith'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`,
+   label:"Faith (Imān) Completed",
+   msg:"True knowledge of Imān strengthens the heart and brings peace. The Prophet ﷺ described Imān as having over seventy branches — you have walked the path of understanding. May Allāh increase you in certainty and conviction. Bārakallāhu feekum."},
+  {keys:['first juz','juz 1','juz one','juz al-baqarah'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>`,
+   label:"First Juz of the Noble Qur'ān",
+   msg:"You have memorised the opening of Sūrah Al-Baqarah — the longest sūrah and the heart of the Qur'ān. The Prophet ﷺ said: 'Learn Sūrah Al-Baqarah, for taking it is a blessing.' You are on a great journey. Bārakallāhu feekum."},
+  {keys:['surah','sūrah','sura'],
+   icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>`,
+   label:"Sūrah Memorised",
+   msg:"Every sūrah memorised is a treasure stored in your heart. The Qur'ān will intercede for those who carry it. Continue memorising one sūrah at a time and let the words of Allāh be your companion in every prayer. Bārakallāhu feekum."},
+];
+const DEFAULT_BADGE={
+  icon:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>`,
+  label:"Achievement Unlocked",
+  msg:"Al-ḥamdulillāh. Every step forward in learning the Qur'ān is a blessing from Allāh. This certificate is a witness to your dedication and effort. May Allāh accept it from you, increase you in knowledge, and keep you firm on this beautiful path. Bārakallāhu feekum."
+};
+function getBadge(ach){const a=ach.toLowerCase();return BADGE_MAP.find(b=>b.keys.some(k=>a.includes(k)))||DEFAULT_BADGE;}
+
+function badgeBlock(ach,accentColor,bgColor){
+  const b=getBadge(ach);
+  return `<div style="display:flex;flex-direction:column;align-items:center;gap:4px;margin:6px 0 10px">
+    <div style="width:52px;height:52px;border-radius:50%;background:${bgColor};border:2.5px solid ${accentColor};display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,.12)">
+      <div style="width:28px;height:28px;color:${accentColor}">${b.icon}</div>
+    </div>
+    <div style="font-size:9px;font-family:'Nunito',sans-serif;font-weight:900;color:${accentColor};letter-spacing:1px;text-transform:uppercase;text-align:center;max-width:110px;line-height:1.3">${b.label}</div>
+  </div>`;
+}
+function autoMsg(d){if(d.msgMode==='auto')return getBadge(d.ach).msg;if(d.msgMode==='custom'&&d.customMsg)return d.customMsg;return '';}
 
 /* ─── TEMPLATE 1: EMERALD CLASSIC ─── */
 function tpl_emerald(d){
@@ -581,7 +728,7 @@ function tpl_emerald(d){
     <div style="border-top:1.5px solid #3d3d30;margin:0 0 16px"></div>
     <!-- body text -->
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;color:#3d3d38;line-height:1.7">This Certificate is Proudly Presented in recognition of excellence,<br>perseverance, and commitment to the Noble Qur'ān to</div>
+      <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
     </div>
     <!-- student name — large italic script -->
     <div style="text-align:center;margin:6px 0 16px">
@@ -589,7 +736,8 @@ function tpl_emerald(d){
     </div>
     <!-- achievement -->
     <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:700;color:#3d3d38">For successfully completing</div>
+      <div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#eaf5ef')}</div>
+    <div style="font-size:13px;font-family:'Nunito',sans-serif;font-weight:700;color:#3d3d38">For successfully completing</div>
       <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#0d3d20;margin-top:4px;word-break:break-word">${d.ach}</div>
     </div>
     <!-- paragraph body -->
@@ -662,13 +810,14 @@ function tpl_gold(d){
     </div>
     <div style="border-top:1.5px solid #c49a20;margin:0 0 14px"></div>
     <!-- presented to -->
-    <div style="text-align:center;font-size:13px;font-weight:600;color:#3d3d38;margin-bottom:8px">This Certificate is Proudly Presented to</div>
+    <div style="text-align:center;font-size:13px;font-weight:600;color:#3d3d38;margin-bottom:8px">This certificate is proudly presented to</div>
     <!-- student name -->
     <div style="text-align:center;margin:4px 0 16px">
       <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#1a1a14;line-height:1.15;word-break:break-word">${d.sname}</div>
     </div>
     <!-- achievement -->
-    <div style="text-align:center;margin-bottom:10px">
+<div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#fffdf0')}</div>
+        <div style="text-align:center;margin-bottom:10px">
       <div style="font-size:13px;font-weight:600;color:#3d3d38">In recognition of successfully completing</div>
       <div style="font-size:18px;font-family:'Cinzel',serif;font-weight:700;color:#0d3d20;margin-top:5px;word-break:break-word">${d.ach}</div>
     </div>
@@ -736,13 +885,14 @@ function tpl_academic(d){
     <div style="border-top:1.5px solid #0d3d20;margin:0 0 16px"></div>
     <!-- body -->
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This Certificate is Proudly Presented in recognition of academic<br>excellence, perseverance, and commitment to learning to</div>
+      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
       <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
+    <div style="text-align:center">${badgeBlock(d.ach,'#0d3d20','#eaf5ef')}</div>
+    <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
       <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;color:#0d3d20;margin-top:4px;word-break:break-word">${d.ach}</div>
     </div>
     ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
@@ -811,13 +961,14 @@ function tpl_distinction(d){
     </div>
     <div style="border-top:1.5px solid #c49a20;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This Certificate is Proudly Presented in recognition of<br>dedication to the Noble Qur'ān and academic excellence to</div>
+      <div style="font-size:13px;font-weight:600;color:#3d3d38;line-height:1.7">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
       <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
+    <div style="text-align:center">${badgeBlock(d.ach,'#c49a20','#fdfaf3')}</div>
+    <div style="font-size:13px;font-weight:700;color:#3d3d38">For successfully completing</div>
       <div style="font-size:17px;font-family:'Cinzel',serif;font-weight:600;color:#a07718;margin-top:4px;word-break:break-word">${d.ach}</div>
     </div>
     ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#3d3d38;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
@@ -883,13 +1034,14 @@ function tpl_parchment(d){
     </div>
     <div style="border-top:1.5px solid #a07718;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#5c3a1e;line-height:1.7">This Certificate is Proudly Presented in recognition of<br>commitment, perseverance, and love for the Noble Qur'ān to</div>
+      <div style="font-size:13px;font-weight:600;color:#5c3a1e;line-height:1.7">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
       <div style="font-size:46px;font-family:'Amiri',serif;font-style:italic;font-weight:700;color:#5c3a1e;line-height:1.15;word-break:break-word">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-weight:700;color:#5c3a1e">For successfully completing</div>
+    <div style="text-align:center">${badgeBlock(d.ach,'#a07718','#fdf8ee')}</div>
+    <div style="font-size:13px;font-weight:700;color:#5c3a1e">For successfully completing</div>
       <div style="font-size:17px;font-family:'Amiri',serif;font-weight:700;color:#a07718;margin-top:4px;word-break:break-word">${d.ach}</div>
     </div>
     ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#5c3a1e;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
@@ -958,13 +1110,14 @@ function tpl_merit(d){
     </div>
     <div style="border-top:1.5px solid #0d3d20;margin:0 0 16px"></div>
     <div style="text-align:center;margin-bottom:6px">
-      <div style="font-size:13px;font-weight:600;color:#0d3d20;line-height:1.7">This Certificate is Proudly Presented in recognition of outstanding<br>achievement, conduct, and commitment to excellence to</div>
+      <div style="font-size:13px;font-weight:600;color:#0d3d20;line-height:1.7">This certificate is proudly presented to</div>
     </div>
     <div style="text-align:center;margin:6px 0 16px">
       <div style="font-size:50px;font-family:'Amiri',serif;font-weight:900;color:#0d3d20;line-height:1.15;word-break:break-word">${d.sname}</div>
     </div>
     <div style="text-align:center;margin-bottom:10px">
-      <div style="font-size:13px;font-weight:600;color:#0d3d20">In recognition of successfully completing</div>
+<div style="text-align:center">${badgeBlock(d.ach,'#1e7540','#d4ede0')}</div>
+        <div style="font-size:13px;font-weight:600;color:#0d3d20">In recognition of successfully completing</div>
       <div style="font-size:17px;font-family:'Playfair Display',serif;font-weight:700;font-style:italic;color:#15572e;margin-top:4px;word-break:break-word">${d.ach}</div>
     </div>
     ${msg?`<div style="font-size:12px;line-height:1.85;text-align:center;color:#0d3d20;font-weight:600;max-width:460px;margin:8px auto 0">${msg}</div>`:''}
@@ -1015,6 +1168,9 @@ const CM={dashboard:'Overview',generate:'New Certificate',records:'All Students'
 const TPL_NAMES={emerald:'Emerald Classic',gold:'Gold Honour',academic:'Academic Excellence',distinction:'Qur\'ānic Distinction',parchment:'Parchment Heritage',merit:'Forest Merit'};
 let recs=[],sigDataUrl=null,logoDataUrl=null,currentTpl='emerald',msgMode='auto';
 
+/* ══ MOBILE ══ */
+function toggleRail(){const r=document.querySelector('.rail');const o=document.getElementById('rail-overlay');r.classList.toggle('open');o.classList.toggle('open');}
+function closeRail(){document.querySelector('.rail').classList.remove('open');document.getElementById('rail-overlay').classList.remove('open');}
 /* ══ INIT ══ */
 function init(){
   // Topbar date
@@ -1043,15 +1199,18 @@ function init(){
   // Show dashboard page
   gp('dashboard');
 
-  // Render stats, feed, progress
+  // Render stats, feed, progress, badges
   updStats();
   updProgress();
+  updBadges();
 }
 
 /* ══ NAVIGATION ══ */
 function launchApp(){document.getElementById('homepage').style.display='none';document.getElementById('app').classList.add('show');init();}
+function scaleCert(){const w=document.querySelector('.cert-canvas-wrap');const cp=document.getElementById('cert-print');if(!cp||!w)return;const avail=w.clientWidth-16;const certW=620;if(avail<certW){const s=Math.max(0.36,avail/certW);cp.style.transform='scale('+s+')';cp.style.transformOrigin='top center';cp.style.marginBottom=((s-1)*830)+'px';}else{cp.style.transform='';cp.style.marginBottom='';}}
+window.addEventListener('resize',scaleCert);
 function goHome(){document.getElementById('app').classList.remove('show');document.getElementById('homepage').style.display='block';}
-function gp(pg,el){
+function gp(pg,el){closeRail();
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.ni').forEach(n=>n.classList.remove('on'));
   document.getElementById('page-'+pg).classList.add('on');
@@ -1085,10 +1244,20 @@ function genCert(){
   // Update header colour to match template
   const hdrColors={emerald:'#0d3d20',gold:'#9a7510',academic:'#0d3d20',distinction:'#0d3d20',parchment:'#5c3a1e',merit:'#15572e'};
   document.getElementById('cm-head').style.background=hdrColors[currentTpl]||'#0d3d20';
+  // Show badge + encouragement panel
+  const _b=getBadge(ach);
+  const enc=document.getElementById('cert-encourage');
+  if(enc){
+    document.getElementById('enc-badge-icon').innerHTML=_b.icon;
+    document.getElementById('enc-badge-label').textContent=_b.label;
+    document.getElementById('enc-msg').textContent=_b.msg;
+    enc.style.display='block';
+  }
   recs.push({nm,ach,date:ds,cid,tc,tpl:currentTpl});
   updStats();updFeed({nm,ach,date:ds,cid});updRecs();updProgress();
   document.getElementById('cert-wrap').style.display='block';
-  document.getElementById('cert-wrap').scrollIntoView({behavior:'smooth',block:'start'});
+  setTimeout(scaleCert,30);
+  scaleCert();document.getElementById('cert-wrap').scrollIntoView({behavior:'smooth',block:'start'});
 }
 
 /* ══ LOADERS & DOWNLOADS ══ */
@@ -1121,26 +1290,60 @@ async function dlThenWa(){
     setTimeout(()=>{
       const sn=document.getElementById('f-name')?.value||'the student';
       const ac=document.getElementById('f-achievement')?.value||'their achievement';
-      const msg=`Alḥamdulillāh! 🌟\n\nCongratulations to *${sn}* for successfully completing *${ac}*!\n\nCertificate issued by *${S.inst}*\n📞 ${S.phone}\n\n_Certificate image attached above._\n\nBārakallāhu feekum. 🌿`;
+      const msg=`Al-ḥamdulillāh. 🌿\n\nCongratulations to *${sn}* on completing a Qur'ān learning milestone!\n\nFor successfully completing: *${ac}*\n\nMay Allāh increase you in knowledge and sincerity. Continue striving in the path of the Qur'ān and share this achievement with your family and friends.\n\nBārakallāhu feekum.\n\n— *${S.inst}* | 📞 ${S.phone}`;
       window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`,'_blank');
     },800);
   }catch(e){hideLdr();alert('Error: '+e.message);}
 }
 function tgCert(){const sn=document.getElementById('f-name')?.value||'student';const msg=`Alḥamdulillāh! Congratulations to ${sn}! Certificate from ${S.inst} — ${S.phone}`;window.open(`https://t.me/share/url?url=${encodeURIComponent(window.location.href)}&text=${encodeURIComponent(msg)}`,'_blank');}
-function closeC(){document.getElementById('cert-wrap').style.display='none';}
+function closeC(){document.getElementById('cert-wrap').style.display='none';const enc=document.getElementById('cert-encourage');if(enc)enc.style.display='none';}
+
+/* ══ BADGES ══ */
+function updBadges(){
+  const keywords={
+    'bc-surah':   ['surah','sūrah','sura'],
+    'bc-alphabet':['alphabet','arabic alphabet'],
+    'bc-juzamma': ["juz 'amma","juz'amma","juz amma","juz-amma"],
+    'bc-tajadv':  ['tajweed advanced','tajwīd advanced'],
+    'bc-tajint':  ['tajweed intermediate','tajwīd intermediate'],
+    'bc-tajbeg':  ['tajweed beginner','tajweed level one','tajwīd beginner','tajwīd level one'],
+    'bc-salah':   ['salah','ṣalāh','salat','prayer training'],
+    'bc-pillars': ['five pillars','pillars of islam'],
+    'bc-iman':    ['iman','imān','faith'],
+    'bc-wudu':    ["wudu","wuḍū","wudhu","purification"],
+    'bc-firstjuz':['first juz','juz 1','juz one','juz al-baqarah'],
+    'bc-fatiha':  ['fatiha','fātiḥah','al-fatiha','surah al-fatihah'],
+  };
+  for(const [id,keys] of Object.entries(keywords)){
+    const el=document.getElementById(id);
+    if(!el)continue;
+    const count=recs.filter(r=>keys.some(k=>r.ach.toLowerCase().includes(k))).length;
+    el.textContent=count+' earned';
+    // highlight badge card if at least 1 earned
+    const card=el.closest('.bc');
+    if(card){
+      card.style.background=count>0?'var(--egl2)':'#fff';
+      card.style.borderColor=count>0?'var(--eg3)':'var(--bdr2)';
+      const bi=card.querySelector('.bi');
+      if(bi)bi.style.background=count>0?'var(--eg)':'var(--egl2)';
+      const svg=card.querySelector('.bi svg');
+      if(svg)svg.style.stroke=count>0?'#fff':'var(--eg2)';
+    }
+  }
+}
 
 /* ══ RECORDS ══ */
-function updStats(){document.getElementById('st-s').textContent=new Set(recs.map(r=>r.nm)).size;document.getElementById('st-c').textContent=recs.length;document.getElementById('st-m').textContent=recs.length;}
+function updStats(){document.getElementById('st-s').textContent=new Set(recs.map(r=>r.nm)).size;document.getElementById('st-c').textContent=recs.length;document.getElementById('st-m').textContent=recs.length;updBadges();}
 function updFeed(r){const f=document.getElementById('feed');if(f.querySelector('.empty-state'))f.innerHTML='';const ini=r.nm.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase();const d=document.createElement('div');d.className='ai';d.innerHTML=`<div class="av">${ini}</div><div class="ai-info"><div class="ai-name">${r.nm}</div><div class="ai-ach">${r.ach}<span class="chip">New</span></div></div><div class="ai-date">Today</div>`;f.insertBefore(d,f.firstChild);}
 function updRecs(){const b=document.getElementById('rec-body');b.innerHTML='';if(!recs.length){b.innerHTML='<tr><td colspan="6" class="emp-td">No certificates yet.</td></tr>';return;}[...recs].reverse().forEach((r,i)=>{const idx=recs.length-1-i;const tr=document.createElement('tr');tr.innerHTML=`<td title="${r.nm}">${r.nm}</td><td title="${r.ach}">${r.ach}</td><td>${TPL_NAMES[r.tpl]||r.tpl}</td><td>${r.date}</td><td>${r.cid}</td><td><button class="btn-xs" onclick="reDl(${idx})">View</button></td>`;b.appendChild(tr);});}
-function reDl(idx){const r=recs[idx];if(!r)return;const data={sname:r.nm,ach:r.ach,teacher:r.tc,date:r.date,cid:r.cid,tpl:r.tpl,inst:S.inst,phone:S.phone,email:S.email,logoUrl:logoDataUrl,sigUrl:sigDataUrl,msgMode:'auto',customMsg:''};const cp=document.getElementById('cert-print');cp.innerHTML=buildCert(data);const hdrColors={emerald:'#0d3d20',gold:'#9a7510',academic:'#0d3d20',distinction:'#0d3d20',parchment:'#5c3a1e',merit:'#15572e'};document.getElementById('cm-head').style.background=hdrColors[r.tpl]||'#0d3d20';document.getElementById('cert-wrap').style.display='block';document.getElementById('cert-wrap').scrollIntoView({behavior:'smooth',block:'start'});}
+function reDl(idx){const r=recs[idx];if(!r)return;const data={sname:r.nm,ach:r.ach,teacher:r.tc,date:r.date,cid:r.cid,tpl:r.tpl,inst:S.inst,phone:S.phone,email:S.email,logoUrl:logoDataUrl,sigUrl:sigDataUrl,msgMode:'auto',customMsg:''};const cp=document.getElementById('cert-print');cp.innerHTML=buildCert(data);const hdrColors={emerald:'#0d3d20',gold:'#9a7510',academic:'#0d3d20',distinction:'#0d3d20',parchment:'#5c3a1e',merit:'#15572e'};document.getElementById('cm-head').style.background=hdrColors[r.tpl]||'#0d3d20';document.getElementById('cert-wrap').style.display='block';setTimeout(scaleCert,30);scaleCert();document.getElementById('cert-wrap').scrollIntoView({behavior:'smooth',block:'start'});}
 function fRecs(){const q=document.getElementById('srch').value.toLowerCase();document.querySelectorAll('#rec-body tr:not([class])').forEach(tr=>{tr.style.display=tr.textContent.toLowerCase().includes(q)?'':'none';});}
 
 /* ══ PROGRESS ══ */
 function updProgress(){const pf=document.getElementById('progress-feed');const students={};recs.forEach(r=>{if(!students[r.nm])students[r.nm]=[];students[r.nm].push(r.ach);});const milestones=['Arabic Alphabet','First Surah','Ṣalāh Training','Wuḍū\' Training','Tajweed Beginner','Tajweed Intermediate','Tajweed Advanced','Juz \'Amma','Five Pillars','Faith (Imān)'];if(!Object.keys(students).length){pf.innerHTML='<div class="empty-state"><div class="es-icon"><svg viewBox="0 0 24 24"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div><div class="es-title">No progress tracked yet</div><div class="es-sub">Generate certificates and student progress will appear automatically.</div></div>';return;}pf.innerHTML='';Object.entries(students).forEach(([nm,achs])=>{const done=milestones.filter(m=>achs.some(a=>a.toLowerCase().includes(m.toLowerCase())));const pct=Math.round((done.length/milestones.length)*100);const ini=nm.split(' ').slice(0,2).map(w=>w[0]).join('').toUpperCase();const el=document.createElement('div');el.className='progress-section';el.innerHTML=`<div class="progress-header"><div style="display:flex;align-items:center;gap:10px"><div class="av">${ini}</div><div class="progress-title">${nm}</div></div><div class="progress-pct">${pct}% Complete</div></div><div class="progress-bar-wrap"><div class="progress-bar-fill" style="width:${pct}%"></div></div><div class="progress-milestones">${milestones.map((m,i)=>{const isDone=achs.some(a=>a.toLowerCase().includes(m.toLowerCase()));return`<div class="p-milestone ${isDone?'done':i===done.length?'next':'locked'}">${m}</div>`}).join('')}</div>`;pf.appendChild(el);});}
 
 /* ══ MESSAGES ══ */
-function genMsg(){const sn=(document.getElementById('m-sn').value||'').trim();const ac=(document.getElementById('m-ach').value||'').trim();if(!sn||!ac){alert('Please enter student name and achievement.');return;}const pt=`Assalāmu ʿalaykum wa raḥmatullāhi wa barakātuh,\n\nWe are pleased to inform you that your child, ${sn}, has successfully completed ${ac}.\n\nAlḥamdulillāh, this is a commendable milestone in their journey with the Noble Qur'ān. Your support as a parent is deeply valued.\n\nMay Allāh bless your family, accept the efforts of ${sn}, and grant them continued steadfastness.\n\nBārakallāhu feekum.`;const st=`Assalāmu ʿalaykum ${sn},\n\nAlḥamdulillāh! Congratulations on successfully completing ${ac}. This is a beautiful achievement that reflects your dedication.\n\nContinue with patience and tawakkul. May Allāh bless your efforts.\n\nBārakallāhu feekum.`;document.getElementById('m-parent').textContent=pt;document.getElementById('m-pfooter').textContent=`${S.inst} · ${S.phone} · ${S.email}`;document.getElementById('m-student').textContent=st;document.getElementById('m-sfooter').textContent=`${S.inst} · ${S.phone} · ${S.email}`;document.getElementById('mcp-body').textContent=pt;document.getElementById('mcp-f2').textContent=`${S.inst} · ${S.phone}`;document.getElementById('mcs-body').textContent=st;document.getElementById('mcs-f2').textContent=`${S.inst} · ${S.phone}`;document.getElementById('mcp-inst').textContent=S.inst;document.getElementById('mcs-inst').textContent=S.inst;document.getElementById('mcp-contact').textContent=`${S.phone} · ${S.email}`;document.getElementById('mcs-contact').textContent=`${S.phone} · ${S.email}`;document.getElementById('msg-area').style.display='block';}
+function genMsg(){const sn=(document.getElementById('m-sn').value||'').trim();const ac=(document.getElementById('m-ach').value||'').trim();if(!sn||!ac){alert('Please enter student name and achievement.');return;}const pt=`Assalāmu \u02BFalaykum wa ra\u1E25matull\u0101hi wa bar ak\u0101tuh,\n\nAl-\u1E25amdulill\u0101h.\n\nYour child, ${sn}, has successfully completed a Qur\u2019\u0101n learning milestone.\n\nFor successfully completing: ${ac}\n\nThank you for supporting your child\u2019s journey in learning the Book of All\u0101h. May All\u0101h reward your efforts and grant your child continued success in learning the Qur\u2019\u0101n.\n\nB\u0101rakall\u0101hu feekum.\n\n${S.inst} | ${S.phone}`;const st=`Assalāmu \u02BFalaykum ${sn},\n\nAl-\u1E25amdulill\u0101h. Congratulations on completing a Qur\u2019\u0101n learning milestone.\n\nFor successfully completing: ${ac}\n\nMay All\u0101h increase you in knowledge and sincerity. Continue striving in the path of the Qur\u2019\u0101n.\n\nB\u0101rakall\u0101hu feekum.\n\n${S.inst} | ${S.phone}`;document.getElementById('m-parent').textContent=pt;document.getElementById('m-pfooter').textContent=`${S.inst} · ${S.phone} · ${S.email}`;document.getElementById('m-student').textContent=st;document.getElementById('m-sfooter').textContent=`${S.inst} · ${S.phone} · ${S.email}`;document.getElementById('mcp-body').textContent=pt;document.getElementById('mcp-f2').textContent=`${S.inst} · ${S.phone}`;document.getElementById('mcs-body').textContent=st;document.getElementById('mcs-f2').textContent=`${S.inst} · ${S.phone}`;document.getElementById('mcp-inst').textContent=S.inst;document.getElementById('mcs-inst').textContent=S.inst;document.getElementById('mcp-contact').textContent=`${S.phone} · ${S.email}`;document.getElementById('mcs-contact').textContent=`${S.phone} · ${S.email}`;document.getElementById('msg-area').style.display='block';}
 function cpMsg(id){const t=document.getElementById(id).textContent;if(navigator.clipboard)navigator.clipboard.writeText(t).then(()=>alert('Copied!'));}
 async function dlMsg(type){const id=type==='parent'?'mcard-p':'mcard-s';const el=document.getElementById(id);showLdr('Generating message image...');try{el.style.position='fixed';el.style.left='-9999px';el.style.top='10px';const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,width:700});el.style.position='absolute';el.style.left='-9999px';el.style.top='0';const url=canvas.toDataURL('image/png',1);const a=document.createElement('a');a.href=url;a.download=`AZS_${type==='parent'?'Parent':'Student'}_Message.png`;document.body.appendChild(a);a.click();document.body.removeChild(a);hideLdr();}catch(e){hideLdr();alert('Error: '+e.message);}}
 async function waMsg(type){const bodyTxt=document.getElementById(type==='parent'?'m-parent':'m-student').textContent;const id=type==='parent'?'mcard-p':'mcard-s';const el=document.getElementById(id);showLdr('Preparing for WhatsApp...');try{el.style.position='fixed';el.style.left='-9999px';el.style.top='10px';const canvas=await html2canvas(el,{scale:2,useCORS:true,backgroundColor:'#ffffff',logging:false,width:700});el.style.position='absolute';el.style.left='-9999px';el.style.top='0';canvas.toBlob(async blob=>{hideLdr();if(navigator.share&&blob&&navigator.canShare&&navigator.canShare({files:[new File([blob],'msg.png',{type:'image/png'})]})){await navigator.share({files:[new File([blob],'msg.png',{type:'image/png'})],text:bodyTxt});}else{window.open(`https://wa.me/?text=${encodeURIComponent(bodyTxt+'\n\n'+S.inst+' | '+S.phone)}`,'_blank');}});}catch(e){hideLdr();window.open(`https://wa.me/?text=${encodeURIComponent(bodyTxt)}`,'_blank');}}
